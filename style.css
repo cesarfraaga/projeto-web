@@ -1,0 +1,33 @@
+html{
+    background-image: url(background.webp);
+    background-size: cover;
+}
+
+a{
+    color:green;
+    font-size: 25px;
+    font-style: italic;
+}
+
+h1{
+    color:black;
+    font-style:inherit;
+}
+
+h2{
+    color:blueviolet
+}
+
+p {
+    font-size: 20px;
+}
+
+#linkedin { /*# chama a ID*/
+    color:rgb(23, 134, 36);
+    font-style:normal;
+    font-size: 20px;
+}
+
+#sobremim {
+    color:black
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/> <!--Chamando o CSS-->
+    <title>Primeiro Site</title> <!--Título do Site-->
+    <script src="jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
+
+    <script>
+        $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
+
+            //Adicionando evento de click //# chama a id
+            $("#buttonteste").click(function(){
+                $("h2").html("teste");
+
+            })
+
+        })  
+
+    </script>
+
+</head>
+<body>
+    <button id="buttonteste">Botão de teste</button>
+    <header>  <!--Grupo navegacional-->
+        
+     <h1 align="center">Aprimorando conhecimentos básicos</h1> <!--Título principal-->
+        <nav> <!--Agrupar lista de links-->
+            <h2 align="center">NAVEGAÇÃO PRINCIPAL</h2>
+                <div align="center"> <!--align alinha onde você escolher-->
+                <a href="html.html" target="_blank">HTML</a> <!--"a" vincula a links externos-->
+                <a href="css.html" target="_blank">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
+                <a href="javascript.html" target="_blank">JavaScript</a>
+                <a href="java.html" target="_blank">Java</a>
+                <a href="Angular.html" target="_blank">Angular</a>
+                </div>
+        </nav>
+        <h2 id="sobremim">Sobre mim:</h2>
+        <p>Me chamo César Fraga, criei esse site com a intenção de aperfeiçoar meus conhecimentos
+            praticando e aplicando aqui tudo o que aprendi. Seguirei mantendo este site atualizado
+            de acordo com a evolução de meus conhecimentos e sugestões de outros programadores, deixo 
+            disponível meu <a id="linkedin" href="https://linkedin.com/in/cesarfraaga" 
+            target="_blank">LinkedIn</a> para que possam 
+            se conectar e enviar sugestões.
+        </p>
+    </header>
+
+</body>
+</html>
