@@ -2,23 +2,45 @@
 <html lang="pt-br">
     <head>
         <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/> <!--Chamando o CSS-->
+        <script src="../app/jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
+        <script>
+            $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
+                $("#tagshtml").click(function(){ //Evento de clique
+                    $("#tagsocultas, #ocultartag").fadeIn(3000); //Exibe com delay 3000 = 3s
+                })
+               $("#ocultartag").click(function(){
+                    $("#tagsocultas, #ocultartag").fadeOut(1500); //Oculta com delay 1500 = 1,5s
+                }) 
+            }) 
+    
+        </script>
     <title>HTML</title>
     </head>
     <body>
 
         <h1>APRIMORANDO HTML</h1>
-        <h2>O que é HTML?</h2>
-        <p>HTML é uma linguagem de marcação que serve como uma estrutura para um projeto
+        <div> 
+            <h2>O que é HTML?</h2>
+            <p>HTML é uma linguagem de marcação que serve como uma estrutura para um projeto
             web, seria o "esqueleto" do projeto.
-        </p>
+            </p>
 
-        <h3>Estrutura base do HTML:</h3>
+            <h2>Elementos ou TAGS</h2>
+            <p>É aquele objeto que podemos identificar dentro de um documento HTML, fica entre
+            os símbolos: &lt;modelo&gt; com seu fechamento utilizando uma " / " dessa forma: &lt;/modelo&gt;<!--&lt; = Abertura | &gt; = Fechamento-->
+            <button id="tagshtml">Clique Aqui</button> para ver algumas tags e suas funcionalidades
+            </p>
+            <img src="../../src/assets/images/fotoperfil.jpg" id="tagsocultas" width="200px" height="200px"> <br>
+            <button id="ocultartag">Ocultar</button>
+        </div>
+        <div>
+            <h2>Estrutura base do HTML:</h2>
 
-        <img src="../../src/assets/images/estruturahtml.png" alt="Estrutura HTML">
-        <p>
-
-        </p>
-
-        
+            <p>
+                Para criar um projeto HTML, necessita-se sempre da seguinte estrutura base:
+            </p>
+            <img src="../../src/assets/images/estruturahtml.png" alt="Estrutura HTML">
+        </div> 
+        <footer>&copy; 2024 - César Fraga da Silva</footer>
     </body>
 </html>
