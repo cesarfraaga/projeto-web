@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/> <!--Chamando o CSS-->
     <title>Primeiro Site</title> <!--Título do Site-->
     <script src="../app/jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
@@ -9,13 +10,19 @@
         $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
  
             //Adicionando evento de click //# chama a id
-            $("#buttonteste").click(function(){
-                $("h2").html("teste");
-
+            $("#buttonteste").mouseover(function(){
+                $("h1").animate({
+                    opacity: "0.5"
+                }) 
+            })
+            $("#buttonteste").mouseout(function(){
+                $("h1").animate({
+                    opacity: "1"
+                }) 
             })
 
         }) 
-
+        
     </script>
 
 </head>
@@ -23,7 +30,7 @@
     <button id="buttonteste">Botão de teste</button>
     <header>  <!--Grupo navegacional-->
         
-     <h1 align="center">Aprimorando conhecimentos básicos</h1> <!--Título principal-->
+     <h1 id="titulomain" align="center">Aprimorando conhecimentos básicos</h1> <!--Título principal-->
         <nav> <!--Agrupar lista de links-->
             <h2 align="center">NAVEGAÇÃO PRINCIPAL</h2>
                 <div align="center"> <!--align alinha onde você escolher-->
@@ -48,3 +55,5 @@
     <footer>    &copy; 2024 - César Fraga da Silva</footer>
 </body>
 </html>
+
+
