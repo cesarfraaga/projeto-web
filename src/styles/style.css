@@ -10,8 +10,11 @@ a{
 }
 
 h1{
-    color:black;
-    font-style:inherit;
+    @font-face {
+        font-family:'abbey_m1';
+        src: url('abbey_m1.ttf') format('truetype')
+    }
+
 }
 
 h2{
@@ -41,8 +44,14 @@ p {
 
 #tagsocultas {
     display: none;
+    font-size: 25px;
 }
+
 #ocultartag {
     display: none;
     border:none;
+}
+
+#titulomain {
+    border-radius: 25%;
 }
