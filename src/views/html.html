@@ -5,42 +5,35 @@
         <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/> <!--Chamando o CSS-->
         <script src="../app/jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
         <script>
-            $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
-                $("#tagshtml").click(function(){ //Evento de clique
-                    $("#tagsocultas, #ocultartag").fadeIn(3000); //Exibe com delay 3000 = 3s
-                    
-                    $("#ocultartag").animate({
-                        width: "200px",
-                        marginLeft: "auto",
-                        marginRight: "auto"
-                    });
-                })
-                $("#tagshtml").mouseover(function(){
-                    $("#tagshtml").animate({
-                        opacity: "0.5"
-                    })
-                })
-                $("#tagshtml").mouseout(function(){
-                    $("#tagshtml").animate({
-                        opacity: "1"
-                    })
-                })
-                $("#ocultartag").mouseover(function(){
-                    $("#ocultartag").animate({
-                        opacity: "0.5"
-                    })
-                })
-                $("#ocultartag").mouseout(function(){
-                    $("#ocultartag").animate({
-                        opacity: "1"
-                    })
-                })
-               $("#ocultartag").click(function(){
-                    $("#tagsocultas, #ocultartag").fadeOut(1500); //Oculta com delay 1500 = 1,5s
-                }) 
-                
-            }) 
-    
+             $(document).ready(function() {
+                var tagsHtml = $("#tagsHtml"); //$("#id") chama a id do elemento
+                var ocultarTag = $("#ocultarTag");
+                var tagsOcultas = $("#tagsOcultas");
+
+                tagsHtml.on({
+                    click: function(){
+                        tagsOcultas.fadeIn(3000);
+                        ocultarTag.animate({ width: "150px"});
+                    },
+                    mouseover: function(){
+                        $(this).animate({ opacity: "0.5"});
+                    },
+                    mouseout: function(){
+                        $(this).animate({ opacity: "1"});
+                    }
+                });
+                ocultarTag.on({
+                    mouseover: function(){
+                        $(this).animate({ opacity: "0.5"});
+                    },
+                    mouseoutr: function(){
+                        $(this).animate({ opacity: "1"});
+                    },
+                    click: function(){
+                        tagsOcultas.fadeOut(1500);
+                    }
+                });
+            });
         </script>
     <title>HTML</title>
     </head>
@@ -48,10 +41,15 @@
 
         <h1 align="center">HTML</h1>
         <div> 
+            <h2>HTML Básico</h2>
+            <p>
+                HTML é uma linguagem de marcação de Hipertexto que serve como uma estrutura para um projeto web, seria 
+                o "esqueleto" do projeto. Os arquivos em HTML podem ser interpretados por navegadores. 
+            </p>
             <h2>O que é HTML?</h2>
             <p>
-                HTML é uma linguagem de marcação que serve como uma estrutura para um projeto web, seria 
-                o "esqueleto" do projeto. Os arquivos em HTML podem ser interpretados por navegadores.
+                HTML é uma linguagem de marcação que é usada para estruturar o conteúdo do seu documento. Você utiliza
+                vários elementos/tags para definir, organizar ou separar várias partes do seu projeto.
             </p>
 
             <h2>Elementos ou TAGS</h2>
@@ -62,20 +60,30 @@
                 elementos, orientando a construção do documento HTML e especificando as características
                 dos componentes. O navegador, ao interpretar o documento, segue uma leitura de cima
                 para baixo e da esquerda para a direita.<br> 
-                Segue o exemplo: &lt;modelo&gt; e o fechamento se dá
-                usando uma "/" dessa forma: &lt;/modelo&gt;<!--&lt; = Abertura | &gt; = Fechamento-->
-            <button id="tagshtml">Clique Aqui</button> para ver as principais tags e suas funcionalidades.
+                Segue o exemplo: &lt;modelo&gt; e o fechamento se dá usando uma "/" dessa 
+                forma: &lt;/modelo&gt;<!--&lt; = Abertura | &gt; = Fechamento-->
             </p>
+            <button id="tagsHtml">Clique Aqui</button> para ver as principais tags e suas funcionalidades.
+            
             <!-- <img src="../../src/assets/images/fotoperfil.jpg" id="tagsocultas" width="200px" height="200px"> <br> -->
         </div>
-       <div id="tagsocultas">
+       <div id="tagsOcultas">
             &lt;!DOCTYPE html> - Instrução para o navegador entender em qual versão do HTML a página está escrita. <br>
             &lt;html> - Elemento raíz do documento HTML <br>
             &lt;head> - Fornece informações essenciais, conhecidas como metadados, sobre o documento. <br>
             &lt;body> - Representa o conteúdo do documento HTML. <br>
-            &lt;a> - <br>
-            <button id="ocultartag">Ocultar</button>
+            &lt;a> - Também chamada de elemento âncora, é utilizada para criar links em páginas web.<br>
+            &lt;br> - É usada como quebra-de-linha<br>
+            &lt;div> - Atua para agrupamento, proporcionando a organização e o agrupamento de conteúdo em um fluxo.<br> 
+            &lt;h1> &lt;-h6> - Representam seis níveis de título de seção.<br>
+            &lt;main> - Define o conteúdo principal dentro do  &lt;body> em seu documento HTML.<br> 
+            &lt;nav> - Representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página.<br>
+            &lt;title> -  Estabelece o título do documento, exibido na barra de título de um navegador ou na aba da página. <br>
+            &lt;p> - Representa um parágrafo. <br>
+            <button id="ocultarTag">Ocultar</button>
         </div> 
+        <h2>Estrutura Base do HTML:</h2>
+            <img src="../../src/assets/images/estruturahtml.png">
         <footer>&copy; 2024 - César Fraga da Silva</footer>
     </body>
 </html>
