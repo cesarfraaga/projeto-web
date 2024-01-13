@@ -8,41 +8,40 @@
 
     <script>
         $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
- 
-            //Adicionando evento de click //# chama a id
-            $("#buttonteste").mouseover(function(){
-                $("h1").animate({
-                    opacity: "0.5"
-                }) 
-            })
-            $("#buttonteste").mouseout(function(){
-                $("h1").animate({
-                    opacity: "1"
-                }) 
-            })
 
-        }) 
+            var elementos = $("#html, #css, #js, #java, #angular");
+            
+            elementos.on({
+                mouseover: function(){
+                    elementos.not(this).animate({ opacity: "0.5"});
+                    $(this).animate({ opacity: "1"});
+                },
+                    mouseout: function(){
+                    elementos.animate({ opacity: "1"});
+                }
+        }); 
+    }); 
+    
         
     </script>
 
 </head>
 <body>
-    <button id="buttonteste">Botão de teste</button>
     <header>  <!--Grupo navegacional-->
         
-     <h1 id="titulomain" align="center">Aprimorando conhecimentos básicos</h1> <!--Título principal-->
+     <h1 id="tituloMain" align="center">Aprimorando conhecimentos básicos</h1> <!--Título principal-->
         <nav> <!--Agrupar lista de links-->
             <h2 align="center">NAVEGAÇÃO PRINCIPAL</h2>
                 <div align="center"> <!--align alinha onde você escolher-->
-                <a href="html.html" target="_blank">HTML</a> <!--"a" vincula a links externos-->
-                <a href="css.html" target="_blank">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
-                <a href="javascript.html" target="_blank">JavaScript</a>
-                <a href="java.html" target="_blank">Java</a>
-                <a href="Angular.html" target="_blank">Angular</a>
+                <a id="html" href="html.html" target="_blank">HTML</a> <!--"a" vincula a links externos-->
+                <a id="css" href="css.html" target="_blank">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
+                <a id="js" href="javascript.html" target="_blank">JavaScript</a>
+                <a id="java" href="java.html" target="_blank">Java</a>
+                <a id="angular" href="Angular.html" target="_blank">Angular</a>
                 </div>
         </nav>
         <div>
-            <h2 id="sobremim">Sobre mim:</h2>
+            <h2 id="sobrMmim">Sobre mim:</h2>
             <p>Me chamo César Fraga, criei esse site com a intenção de aperfeiçoar meus conhecimentos
             praticando e aplicando aqui tudo o que aprendi. Seguirei mantendo este site atualizado
             de acordo com a evolução de meus conhecimentos e sugestões de outros programadores, deixo 
