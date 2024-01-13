@@ -5,26 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/> <!--Chamando o CSS-->
     <title>Primeiro Site</title> <!--Título do Site-->
     <script src="../app/jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
-
-    <script>
-        $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
-
-            var elementos = $("#html, #css, #js, #java, #angular");
-            
-            elementos.on({
-                mouseover: function(){
-                    elementos.not(this).animate({ opacity: "0.5"});
-                    $(this).animate({ opacity: "1"});
-                },
-                    mouseout: function(){
-                    elementos.animate({ opacity: "1"});
-                }
-        }); 
-    }); 
-    
-        
-    </script>
-
+    <script src="../app/script-home.js"></script>
 </head>
 <body>
     <header>  <!--Grupo navegacional-->
@@ -33,15 +14,15 @@
         <nav> <!--Agrupar lista de links-->
             <h2 align="center">NAVEGAÇÃO PRINCIPAL</h2>
                 <div align="center"> <!--align alinha onde você escolher-->
-                <a id="html" href="html.html" target="_blank">HTML</a> <!--"a" vincula a links externos-->
-                <a id="css" href="css.html" target="_blank">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
-                <a id="js" href="javascript.html" target="_blank">JavaScript</a>
-                <a id="java" href="java.html" target="_blank">Java</a>
-                <a id="angular" href="Angular.html" target="_blank">Angular</a>
+                <a id="html" href="html.html" target="_self">HTML</a> <!--"a" vincula a links externos-->
+                <a id="css" href="css.html" target="_self">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
+                <a id="js" href="javascript.html" target="_self">JAVASCRIPT</a>
+                <a id="java" href="java.html" target="_self">JAVA</a>
+                <a id="angular" href="Angular.html" target="_self">ANGULAR</a>
                 </div>
         </nav>
         <div>
-            <h2 id="sobrMmim">Sobre mim:</h2>
+            <h1 id="sobreMmim">Sobre mim:</h1>
             <p>Me chamo César Fraga, criei esse site com a intenção de aperfeiçoar meus conhecimentos
             praticando e aplicando aqui tudo o que aprendi. Seguirei mantendo este site atualizado
             de acordo com a evolução de meus conhecimentos e sugestões de outros programadores, deixo 

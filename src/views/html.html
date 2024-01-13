@@ -4,41 +4,20 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen"/> <!--Chamando o CSS-->
         <script src="../app/jquery-3.7.1.min.js"></script> <!--Chama o jquery do JS para trabalhar com mais praticidade-->
-        <script>
-             $(document).ready(function() {
-                var tagsHtml = $("#tagsHtml"); //$("#id") chama a id do elemento
-                var ocultarTag = $("#ocultarTag");
-                var tagsOcultas = $("#tagsOcultas");
-
-                tagsHtml.on({
-                    click: function(){
-                        tagsOcultas.fadeIn(3000);
-                        ocultarTag.animate({ width: "150px"});
-                    },
-                    mouseover: function(){
-                        $(this).animate({ opacity: "0.5"});
-                    },
-                    mouseout: function(){
-                        $(this).animate({ opacity: "1"});
-                    }
-                });
-                ocultarTag.on({
-                    mouseover: function(){
-                        $(this).animate({ opacity: "0.5"});
-                    },
-                    mouseoutr: function(){
-                        $(this).animate({ opacity: "1"});
-                    },
-                    click: function(){
-                        tagsOcultas.fadeOut(1500);
-                    }
-                });
-            });
-        </script>
+        <script src="../app/script-html.js"></script>
     <title>HTML</title>
     </head>
     <body>
-
+        <nav> <!--Agrupar lista de links-->
+            <h2 align="center">NAVEGAÇÃO PRINCIPAL</h2>
+                <div align="center"> <!--align alinha onde você escolher-->
+                <a id="home" href="home.html" target="_self">HOME</a>
+                <a id="css" href="css.html" target="_self">CSS</a> <!--target="blank" é pra abrir o link em nova guia-->
+                <a id="js" href="javascript.html" target="_self">JAVASCRIPT</a><!--"a" vincula a links externos-->
+                <a id="java" href="java.html" target="_self">JAVA</a>
+                <a id="angular" href="Angular.html" target="_self">ANGULAR</a>
+                </div>
+        </nav>
         <h1 align="center">HTML</h1>
         <div> 
             <h2>HTML Básico</h2>
