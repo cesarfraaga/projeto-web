@@ -10,10 +10,7 @@ a{
 }
 
 h1{
-    @font-face {
-        font-family:'abbey_m1';
-        src: url('abbey_m1.ttf') format('truetype')
-    }
+    font-size: 30px;
 
 }
 
@@ -55,4 +52,16 @@ p {
 
 #tituloMain {
     border-radius: 25%;
+}
+
+#tiposUsoCss {
+    color:tomato;
+    font-size: 22px;
+}
+h4{
+    color:blue
+}
+
+#imgChamandoCss {
+    display: none;
 }
