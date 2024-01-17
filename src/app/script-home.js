@@ -1,7 +1,7 @@
 $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
 
     var elementos = $("#html, #css, #js, #java, #angular");
-    
+
     elementos.on({
         mouseover: function(){
             elementos.not(this).animate({ opacity: "0.5"});
@@ -11,4 +11,5 @@ $(document).ready(function(){ //Adicionar eventos ao meu site usando JQuery
             elementos.animate({ opacity: "1"});
         }
 }); 
+
 }); 
